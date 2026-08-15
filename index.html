@@ -4,228 +4,410 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Trade With Deepak Wadhwa</title>
+<title>Trade With Deepak Wadhwa | Trade For Profit</title>
+
+<meta name="description"
+content="Trade With Deepak Wadhwa - Trading education, market insights, strategies, risk management and trading discipline.">
 
 <style>
+
 *{
   box-sizing:border-box;
-}
-
-html,body{
   margin:0;
   padding:0;
-  width:100%;
-  min-height:100%;
+}
+
+html{
+  scroll-behavior:smooth;
 }
 
 body{
-  background:#020b07;
-  color:#fff;
-  font-family:Arial,sans-serif;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  overflow:hidden;
+  background:#020806;
+  color:#ffffff;
+  font-family:Arial,Helvetica,sans-serif;
+  line-height:1.5;
 }
 
-body::before{
+body:before{
   content:"";
   position:fixed;
   inset:0;
-  background-image:radial-gradient(#21ee7130 1px,transparent 1px);
-  background-size:24px 24px;
-  opacity:.35;
+  pointer-events:none;
+  background-image:
+  radial-gradient(#25ee7625 1px,transparent 1px);
+  background-size:28px 28px;
+  opacity:.45;
+  z-index:-1;
 }
 
-.page{
-  width:min(430px,100%);
+.container{
+  width:min(1050px,92%);
+  margin:auto;
+}
+
+section{
+  padding:70px 0;
+}
+
+/* HERO */
+
+.hero{
   min-height:100vh;
-  padding:18px;
   display:flex;
-  flex-direction:column;
-  justify-content:center;
+  align-items:center;
   text-align:center;
   position:relative;
+  overflow:hidden;
 }
 
-.glow{
+.heroGlow{
   position:absolute;
-  width:390px;
-  height:390px;
-  background:#12ed6817;
+  width:550px;
+  height:550px;
   border-radius:50%;
-  filter:blur(55px);
+  background:#16ed6918;
+  filter:blur(70px);
   left:50%;
-  top:7%;
+  top:5%;
   transform:translateX(-50%);
   z-index:-1;
 }
 
 .logo{
-  width:205px;
-  height:205px;
-  object-fit:cover;
+  width:210px;
+  height:210px;
   border-radius:50%;
-  margin:0 auto 10px;
-  filter:drop-shadow(0 0 22px #17ef6740);
+  object-fit:cover;
+  filter:drop-shadow(0 0 30px #1bee6a55);
+  margin-bottom:22px;
 }
 
-.small{
-  font-size:9px;
-  letter-spacing:3px;
-  color:#e9c957;
-  font-weight:800;
+.badge{
+  display:inline-block;
+  padding:7px 15px;
+  border:1px solid #29ed7444;
+  background:#071b10;
+  color:#50fa8c;
+  border-radius:30px;
+  font-size:11px;
+  font-weight:bold;
+  letter-spacing:2px;
+  margin-bottom:15px;
 }
 
 h1{
-  font-size:29px;
-  line-height:1.02;
-  margin:7px 0 5px;
-  font-weight:900;
-  letter-spacing:-1px;
+  font-size:clamp(38px,7vw,72px);
+  line-height:.95;
+  font-weight:950;
+  letter-spacing:-3px;
 }
 
-h1 span{
-  color:#39f77e;
+.green{
+  color:#40f985;
 }
 
-.tag{
-  font-size:14px;
-  letter-spacing:4px;
+.tagline{
+  font-size:clamp(17px,3vw,25px);
+  letter-spacing:5px;
   font-weight:800;
-  margin-bottom:12px;
+  margin-top:17px;
 }
 
-.line{
-  width:85px;
-  height:2px;
-  background:#22eb70;
-  margin:0 auto 14px;
-  box-shadow:0 0 10px #22eb70;
+.heroText{
+  max-width:650px;
+  margin:20px auto 28px;
+  color:#9db2a5;
+  font-size:16px;
 }
 
-.cards{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:7px;
-  margin:0 auto 8px;
-  width:100%;
+.btn{
+  display:inline-block;
+  text-decoration:none;
+  color:#021009;
+  background:linear-gradient(135deg,#18df69,#75ffa6);
+  padding:17px 30px;
+  border-radius:12px;
+  font-weight:950;
+  font-size:14px;
+  border:1px solid #a5ffc4;
+  box-shadow:
+  0 0 20px #20f27580,
+  0 0 50px #20f27530;
+  transition:.2s;
 }
 
-.card{
-  background:#061a10dd;
-  border:1px solid #1be86b44;
-  border-radius:10px;
-  padding:9px 5px;
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:
+  0 0 30px #20f275b0,
+  0 0 65px #20f27545;
 }
 
-.card b{
-  display:block;
-  font-size:10px;
-  margin-bottom:3px;
+.btnSmall{
+  margin-top:12px;
+  padding:13px 22px;
+  font-size:12px;
 }
 
-.card span{
-  font-size:8px;
-  color:#8fa89a;
+/* TITLES */
+
+.sectionTitle{
+  text-align:center;
+  font-size:clamp(28px,5vw,44px);
+  font-weight:950;
+  margin-bottom:10px;
 }
+
+.sectionTitle span{
+  color:#40f985;
+}
+
+.sectionText{
+  max-width:650px;
+  margin:0 auto 35px;
+  text-align:center;
+  color:#91a69a;
+}
+
+/* STATS */
 
 .stats{
   display:grid;
   grid-template-columns:repeat(4,1fr);
-  gap:6px;
-  margin-bottom:12px;
+  gap:12px;
 }
 
 .stat{
-  border:1px solid #1be86b38;
-  background:#06170ed9;
-  border-radius:9px;
-  padding:8px 3px;
+  text-align:center;
+  padding:25px 10px;
+  background:linear-gradient(180deg,#071c11,#04100a);
+  border:1px solid #1be86b40;
+  border-radius:15px;
 }
 
 .stat strong{
   display:block;
-  color:#43fa82;
-  font-size:16px;
+  font-size:30px;
+  color:#42fa84;
 }
 
-.stat small{
-  font-size:7px;
-  color:#8fa89a;
+.stat span{
+  color:#82988c;
+  font-size:11px;
 }
 
-/* BIG HIGHLIGHTED JOIN BUTTON */
+/* BENEFITS */
 
-.join{
-  display:block;
-  text-decoration:none;
-  color:#021008;
-  font-weight:900;
+.grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+
+.card{
+  background:linear-gradient(180deg,#071c11,#030c07);
+  border:1px solid #1be86b38;
+  border-radius:17px;
+  padding:25px;
+}
+
+.icon{
+  font-size:30px;
+  margin-bottom:12px;
+}
+
+.card h3{
+  font-size:17px;
+  margin-bottom:7px;
+}
+
+.card p{
+  color:#8fa69a;
   font-size:13px;
-  letter-spacing:.2px;
-  background:linear-gradient(135deg,#12dc63,#75ffa6);
-  padding:17px 12px;
+}
+
+/* WHAT YOU GET */
+
+.list{
+  max-width:700px;
+  margin:auto;
+}
+
+.listItem{
+  display:flex;
+  gap:15px;
+  align-items:flex-start;
+  background:#06170e;
+  border:1px solid #1be86b30;
+  border-radius:13px;
+  padding:17px;
+  margin-bottom:10px;
+}
+
+.check{
+  color:#43fa82;
+  font-size:20px;
+  font-weight:bold;
+}
+
+.listItem h3{
+  font-size:15px;
+}
+
+.listItem p{
+  color:#879c90;
+  font-size:12px;
+  margin-top:3px;
+}
+
+/* REVIEWS */
+
+.reviews{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+
+.review{
+  background:#06170e;
+  border:1px solid #1be86b30;
+  border-radius:15px;
+  padding:22px;
+}
+
+.stars{
+  color:#ffd45b;
+  letter-spacing:2px;
+  margin-bottom:12px;
+}
+
+.review p{
+  color:#a1b3a8;
+  font-size:13px;
+  margin-bottom:15px;
+}
+
+.review strong{
+  color:#fff;
+  font-size:12px;
+}
+
+/* CTA */
+
+.cta{
+  text-align:center;
+  padding:55px 20px;
+  border:1px solid #21ed7060;
+  border-radius:25px;
+  background:
+  radial-gradient(circle at center,#0b351e,#030d08 70%);
+  box-shadow:0 0 60px #18ef6812;
+}
+
+.cta h2{
+  font-size:clamp(28px,5vw,44px);
+  margin-bottom:10px;
+}
+
+.cta p{
+  color:#91a69a;
+  max-width:600px;
+  margin:0 auto 25px;
+}
+
+/* FAQ */
+
+.faq{
+  max-width:750px;
+  margin:auto;
+}
+
+details{
+  background:#06170e;
+  border:1px solid #1be86b30;
   border-radius:12px;
-  border:1px solid #9affbd;
-  box-shadow:
-    0 0 18px #20f27580,
-    0 0 42px #20f27535;
-  animation:joinPulse 1.8s ease-in-out infinite;
-  transition:.2s ease;
+  padding:17px;
+  margin-bottom:9px;
 }
 
-.join:hover{
-  transform:translateY(-2px) scale(1.01);
-  box-shadow:
-    0 0 24px #20f275b0,
-    0 0 55px #20f27555;
+summary{
+  cursor:pointer;
+  font-weight:bold;
+  font-size:14px;
 }
 
-.join:active{
-  transform:scale(.98);
+details p{
+  color:#91a69a;
+  font-size:13px;
+  margin-top:12px;
 }
 
-@keyframes joinPulse{
-  0%,100%{
-    box-shadow:
-      0 0 18px #20f27580,
-      0 0 42px #20f27535;
+/* DISCLAIMER */
+
+.disclaimer{
+  border-top:1px solid #ffffff12;
+  margin-top:20px;
+  padding-top:30px;
+  color:#65786d;
+  font-size:10px;
+  text-align:center;
+}
+
+/* FOOTER */
+
+footer{
+  border-top:1px solid #ffffff10;
+  text-align:center;
+  padding:25px;
+  color:#61746a;
+  font-size:11px;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+  section{
+    padding:50px 0;
   }
 
-  50%{
-    box-shadow:
-      0 0 30px #20f275b0,
-      0 0 65px #20f27555;
+  .hero{
+    min-height:100svh;
   }
-}
-
-.note{
-  font-size:7px;
-  color:#667d70;
-  margin-top:7px;
-}
-
-@media(max-height:700px){
 
   .logo{
-    width:145px;
-    height:145px;
+    width:165px;
+    height:165px;
   }
 
   h1{
-    font-size:25px;
+    font-size:42px;
   }
 
-  .card{
-    padding:7px 4px;
+  .tagline{
+    font-size:14px;
+    letter-spacing:3px;
   }
 
-  .join{
-    padding:14px 10px;
-    font-size:12px;
+  .stats{
+    grid-template-columns:1fr 1fr;
   }
+
+  .reviews{
+    grid-template-columns:1fr;
+  }
+
+  .grid{
+    grid-template-columns:1fr;
+  }
+
+  .btn{
+    width:100%;
+    max-width:360px;
+  }
+
 }
+
 </style>
 
 
@@ -261,7 +443,6 @@ s.parentNode.insertBefore(t,s)
 
 fbq('init','277800525483173434');
 
-/* Website open */
 fbq('track','PageView');
 </script>
 
@@ -276,113 +457,409 @@ src="https://www.facebook.com/tr?id=277800525483173434&ev=PageView&noscript=1"
 
 <!-- ================= END META PIXEL ================= -->
 
+
 </head>
 
 <body>
 
-<div class="page">
+<!-- ================= HERO ================= -->
 
-<div class="glow"></div>
+<section class="hero">
 
-<!-- LOGO -->
+<div class="heroGlow"></div>
+
+<div class="container">
+
 <img
-  class="logo"
-  src="logo.png"
-  alt="Trade With Deepak Wadhwa"
+src="logo.png"
+class="logo"
+alt="Trade With Deepak Wadhwa"
 >
 
-<div class="small">
-WELCOME TO
+<div>
+<span class="badge">TRADING • MARKET INSIGHTS • EDUCATION</span>
 </div>
 
 <h1>
-TRADE WITH <span>DEEPAK WADHWA</span>
+TRADE WITH
+<br>
+<span class="green">DEEPAK WADHWA</span>
 </h1>
 
-<div class="tag">
+<div class="tagline">
 TRADE FOR PROFIT
 </div>
 
-<div class="line"></div>
+<p class="heroText">
+Learn trading with a focus on market understanding,
+strategy, risk management and disciplined decision making.
+</p>
 
-
-<!-- BENEFITS -->
-
-<div class="cards">
-
-<div class="card">
-<b>📈 PROVEN STRATEGIES</b>
-<span>Smart market approach</span>
-</div>
-
-<div class="card">
-<b>🛡️ RISK MANAGEMENT</b>
-<span>Protect your capital</span>
-</div>
-
-<div class="card">
-<b>🎯 DISCIPLINE</b>
-<span>Trade with consistency</span>
-</div>
-
-<div class="card">
-<b>📊 MARKET INSIGHTS</b>
-<span>Understand the market</span>
-</div>
+<a
+class="btn"
+href="https://wa.me/918850960591?text=Hello%20Deepak%20Wadhwa%2C%20mujhe%20trading%20ke%20baare%20mein%20information%20chahiye."
+target="_blank"
+rel="noopener noreferrer"
+onclick="if(typeof fbq==='function'){fbq('track','Contact');}"
+>
+💬 WHATSAPP PAR MESSAGE KAREIN
+</a>
 
 </div>
 
+</section>
 
-<!-- STATS -->
+
+<!-- ================= STATS ================= -->
+
+<section>
+
+<div class="container">
+
+<h2 class="sectionTitle">
+TRADING <span>COMMUNITY</span>
+</h2>
+
+<p class="sectionText">
+A focused approach towards learning, market awareness and trading discipline.
+</p>
 
 <div class="stats">
 
 <div class="stat">
 <strong>80K+</strong>
-<small>MEMBERS</small>
-</div>
-
-<div class="stat">
-<strong>SEBI</strong>
-<small>REGISTERED</small>
-</div>
-
-<div class="stat">
-<strong>FREE</strong>
-<small>RESOURCES</small>
+<span>COMMUNITY</span>
 </div>
 
 <div class="stat">
 <strong>DAILY</strong>
-<small>ANALYSIS</small>
+<span>MARKET INSIGHTS</span>
+</div>
+
+<div class="stat">
+<strong>FREE</strong>
+<span>LEARNING</span>
+</div>
+
+<div class="stat">
+<strong>24/7</strong>
+<span>ACCESS</span>
 </div>
 
 </div>
 
+</div>
 
-<!-- TELEGRAM JOIN BUTTON -->
+</section>
+
+
+<!-- ================= BENEFITS ================= -->
+
+<section>
+
+<div class="container">
+
+<h2 class="sectionTitle">
+WHY <span>TRADE WITH US?</span>
+</h2>
+
+<p class="sectionText">
+Trading is not just about taking trades. It is about strategy,
+risk management and discipline.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<div class="icon">📈</div>
+<h3>MARKET ANALYSIS</h3>
+<p>
+Understand market trends, price action and important market movements.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🎯</div>
+<h3>TRADING STRATEGIES</h3>
+<p>
+Learn structured approaches to analysing potential trading opportunities.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🛡️</div>
+<h3>RISK MANAGEMENT</h3>
+<p>
+Understand why protecting capital is an important part of trading.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🧠</div>
+<h3>TRADING DISCIPLINE</h3>
+<p>
+Build consistency and learn to approach the market with discipline.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= WHAT YOU GET ================= -->
+
+<section>
+
+<div class="container">
+
+<h2 class="sectionTitle">
+WHAT <span>YOU GET</span>
+</h2>
+
+<p class="sectionText">
+Everything designed around better trading awareness and education.
+</p>
+
+<div class="list">
+
+<div class="listItem">
+<div class="check">✓</div>
+<div>
+<h3>Market Insights</h3>
+<p>Stay informed about important market movements and trends.</p>
+</div>
+</div>
+
+<div class="listItem">
+<div class="check">✓</div>
+<div>
+<h3>Trading Education</h3>
+<p>Learn concepts that help you understand the market better.</p>
+</div>
+</div>
+
+<div class="listItem">
+<div class="check">✓</div>
+<div>
+<h3>Risk Management</h3>
+<p>Learn the importance of managing risk before entering a trade.</p>
+</div>
+</div>
+
+<div class="listItem">
+<div class="check">✓</div>
+<div>
+<h3>Trading Psychology</h3>
+<p>Develop a disciplined mindset for better decision making.</p>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section>
+
+<div class="container">
+
+<div class="cta">
+
+<h2>
+READY TO <span class="green">LEARN TRADING?</span>
+</h2>
+
+<p>
+Message us on WhatsApp to know more about the trading
+community and available learning resources.
+</p>
 
 <a
-class="join"
-href="https://t.me/+H-Nabz_jokVmYzVl"
+class="btn"
+href="https://wa.me/918850960591?text=Hello%20Deepak%20Wadhwa%2C%20mujhe%20trading%20ke%20baare%20mein%20information%20chahiye."
 target="_blank"
 rel="noopener noreferrer"
-
-onclick="
-if(typeof fbq==='function'){
-  fbq('track','Subscribe');
-}
-"
+onclick="if(typeof fbq==='function'){fbq('track','Contact');}"
 >
-✈ JOIN TRADE WITH DEEPAK WADHWA — FREE
+💬 CHAT ON WHATSAPP
 </a>
 
-
-<div class="note">
-Trade responsibly. Market investments are subject to risk.
 </div>
 
 </div>
+
+</section>
+
+
+<!-- ================= REVIEWS ================= -->
+
+<section>
+
+<div class="container">
+
+<h2 class="sectionTitle">
+COMMUNITY <span>REVIEWS</span>
+</h2>
+
+<p class="sectionText">
+Genuine reviews from your community members can be displayed here.
+Replace the sample placeholders below with your verified reviews.
+</p>
+
+<div class="reviews">
+
+<div class="review">
+<div class="stars">★★★★★</div>
+<p>
+“Add a genuine review from one of your community members here.”
+</p>
+<strong>— Verified Community Member</strong>
+</div>
+
+<div class="review">
+<div class="stars">★★★★★</div>
+<p>
+“Add a genuine review about the learning experience here.”
+</p>
+<strong>— Verified Community Member</strong>
+</div>
+
+<div class="review">
+<div class="stars">★★★★★</div>
+<p>
+“Add a genuine review about market education and insights here.”
+</p>
+<strong>— Verified Community Member</strong>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FAQ ================= -->
+
+<section>
+
+<div class="container">
+
+<h2 class="sectionTitle">
+FREQUENTLY <span>ASKED QUESTIONS</span>
+</h2>
+
+<div class="faq">
+
+<details>
+<summary>Is this suitable for beginners?</summary>
+<p>
+Yes. The content can be structured for people who are starting
+their trading learning journey as well as existing traders.
+</p>
+</details>
+
+<details>
+<summary>What will I learn?</summary>
+<p>
+Topics can include market analysis, trading concepts,
+risk management and trading discipline.
+</p>
+</details>
+
+<details>
+<summary>How can I get more information?</summary>
+<p>
+Click the WhatsApp button and send a message to get more information.
+</p>
+</details>
+
+<details>
+<summary>Is trading risk-free?</summary>
+<p>
+No. Trading and investing involve market risk. Past performance
+does not guarantee future results.
+</p>
+</details>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FINAL CTA ================= -->
+
+<section>
+
+<div class="container">
+
+<div class="cta">
+
+<h2>
+TRADE SMARTER.
+<br>
+<span class="green">STAY DISCIPLINED.</span>
+</h2>
+
+<p>
+Connect with us on WhatsApp to learn more.
+</p>
+
+<a
+class="btn"
+href="https://wa.me/918850960591?text=Hello%20Deepak%20Wadhwa%2C%20mujhe%20trading%20ke%20baare%20mein%20information%20chahiye."
+target="_blank"
+rel="noopener noreferrer"
+onclick="if(typeof fbq==='function'){fbq('track','Contact');}"
+>
+🚀 WHATSAPP NOW
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= DISCLAIMER ================= -->
+
+<div class="container">
+
+<div class="disclaimer">
+
+<strong>RISK DISCLAIMER</strong>
+
+<br><br>
+
+Trading and investing in financial markets involves risk.
+The information provided on this website is for educational
+and informational purposes only and should not be considered
+as financial, investment or trading advice.
+
+Always conduct your own research and understand the risks
+before making any financial decision.
+
+</div>
+
+</div>
+
+
+<footer>
+
+© 2026 Trade With Deepak Wadhwa · Trade For Profit
+
+</footer>
+
 
 </body>
 </html>
