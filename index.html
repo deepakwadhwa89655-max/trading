@@ -1,1207 +1,804 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Trading Guidance | Learn & Trade Smarter</title>
-
-  <meta name="description"
-        content="Learn about trading opportunities, risk management and market strategies. Connect with us on WhatsApp.">
-
-  <!-- ================= META PIXEL ================= -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;
-    n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}
-    (window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-
-    fbq('init', '27780052548317434');
-    fbq('track', 'PageView');
-  </script>
-
-  <noscript>
-    <img
-      height="1"
-      width="1"
-      style="display:none"
-      src="https://www.facebook.com/tr?id=27780052548317434&ev=PageView&noscript=1"
-    />
-  </noscript>
-  <!-- ============== END META PIXEL ============== -->
-
-
-  <style>
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: #101828;
-      background:
-        radial-gradient(circle at 85% 10%, rgba(70,130,255,0.12), transparent 28%),
-        radial-gradient(circle at 10% 45%, rgba(36,211,153,0.10), transparent 30%),
-        #ffffff;
-      line-height: 1.6;
-    }
-
-    /* ================= HEADER ================= */
-
-    header {
-      width: 100%;
-      padding: 22px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: relative;
-      z-index: 10;
-    }
-
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-size: 21px;
-      font-weight: 800;
-      color: #111827;
-    }
-
-    .brand-icon {
-      width: 43px;
-      height: 43px;
-      border-radius: 13px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(135deg, #2563eb, #60a5fa);
-      color: white;
-      box-shadow: 0 10px 25px rgba(37,99,235,.25);
-    }
-
-    .brand span {
-      color: #2563eb;
-    }
-
-    .top-badge {
-      background: #eafff4;
-      border: 1px solid #b8efd0;
-      color: #13945e;
-      padding: 8px 17px;
-      border-radius: 30px;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-
-    /* ================= HERO ================= */
-
-    .hero {
-      max-width: 1150px;
-      margin: auto;
-      padding: 55px 25px 35px;
-      min-height: 690px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: center;
-      gap: 55px;
-    }
-
-    .hero-left {
-      position: relative;
-      z-index: 2;
-    }
-
-    .small-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: #ffffff;
-      border: 1px solid #dbe3ef;
-      padding: 9px 16px;
-      border-radius: 30px;
-      color: #475467;
-      font-size: 14px;
-      box-shadow: 0 8px 25px rgba(16,24,40,.05);
-      margin-bottom: 22px;
-    }
-
-    .green-dot {
-      width: 9px;
-      height: 9px;
-      background: #16c784;
-      border-radius: 50%;
-    }
-
-    h1 {
-      font-size: clamp(43px, 6vw, 72px);
-      line-height: .98;
-      letter-spacing: -3px;
-      color: #0f172a;
-      margin-bottom: 23px;
-    }
-
-    h1 .blue {
-      color: #2563eb;
-    }
-
-    h1 .green {
-      color: #16a36a;
-    }
-
-    .hero-description {
-      color: #526175;
-      font-size: 18px;
-      max-width: 560px;
-      margin-bottom: 25px;
-    }
-
-
-    /* ================= CTA ================= */
-
-    .investment-cta {
-      display: flex;
-      gap: 15px;
-      align-items: center;
-      background: linear-gradient(135deg, #eff7ff, #f5fbff);
-      border-left: 4px solid #2563eb;
-      padding: 17px 18px;
-      border-radius: 12px;
-      margin-bottom: 25px;
-      box-shadow: 0 8px 25px rgba(37,99,235,.08);
-    }
-
-    .cta-icon {
-      min-width: 45px;
-      height: 45px;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #ffffff;
-      font-size: 24px;
-      box-shadow: 0 5px 15px rgba(0,0,0,.06);
-    }
-
-    .investment-cta h3 {
-      font-size: 18px;
-      color: #173b80;
-      margin-bottom: 3px;
-    }
-
-    .investment-cta p {
-      font-size: 14px;
-      color: #5b6b82;
-    }
-
-
-    /* ================= WHATSAPP MAIN BUTTON ================= */
-
-    .main-whatsapp {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      min-width: 330px;
-      padding: 17px 27px;
-      background: linear-gradient(135deg, #10b981, #16a36a);
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 17px;
-      font-weight: 800;
-      border-radius: 12px;
-      box-shadow:
-        0 14px 30px rgba(16,185,129,.28),
-        0 0 0 5px rgba(16,185,129,.07);
-      transition: .25s ease;
-    }
-
-    .main-whatsapp:hover {
-      transform: translateY(-3px);
-      box-shadow:
-        0 18px 35px rgba(16,185,129,.35),
-        0 0 0 7px rgba(16,185,129,.08);
-    }
-
-    .wa-svg {
-      width: 24px;
-      height: 24px;
-      fill: white;
-    }
-
-    .risk-note {
-      margin-top: 12px;
-      color: #78869a;
-      font-size: 11px;
-    }
-
-
-    /* ================= CHART ================= */
-
-    .chart-card {
-      position: relative;
-      background: rgba(255,255,255,.86);
-      border: 1px solid #e2e8f0;
-      border-radius: 25px;
-      padding: 22px;
-      box-shadow:
-        0 25px 70px rgba(30,64,175,.13),
-        0 5px 20px rgba(15,23,42,.04);
-      overflow: hidden;
-    }
-
-    .chart-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 15px;
-    }
-
-    .chart-title {
-      font-weight: 800;
-      color: #172033;
-    }
-
-    .live {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-      color: #16a36a;
-      font-size: 12px;
-      font-weight: 700;
-    }
-
-    .live-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: #16c784;
-      box-shadow: 0 0 0 5px rgba(22,199,132,.12);
-    }
-
-    .chart-area {
-      height: 330px;
-      position: relative;
-      border-radius: 15px;
-      overflow: hidden;
-      background:
-        linear-gradient(rgba(148,163,184,.13) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(148,163,184,.13) 1px, transparent 1px),
-        #f8fbff;
-      background-size: 55px 55px;
-    }
-
-    .chart-svg {
-      width: 100%;
-      height: 100%;
-    }
-
-    .chart-bottom {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 10px;
-      margin-top: 15px;
-    }
-
-    .mini-stat {
-      padding: 12px;
-      background: #f8fafc;
-      border: 1px solid #e6ebf2;
-      border-radius: 12px;
-    }
-
-    .mini-stat small {
-      color: #667085;
-      display: block;
-      font-size: 11px;
-      margin-bottom: 3px;
-    }
-
-    .mini-stat strong {
-      font-size: 17px;
-      color: #172033;
-    }
-
-    .positive {
-      color: #0b9b61 !important;
-    }
-
-
-    /* ================= FEATURES ================= */
-
-    .section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 55px 25px;
-    }
-
-    .section-heading {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .section-heading h2 {
-      font-size: 35px;
-      color: #101828;
-      margin-bottom: 8px;
-    }
-
-    .section-heading p {
-      color: #667085;
-    }
-
-    .features {
-      display: grid;
-      grid-template-columns: repeat(4,1fr);
-      gap: 15px;
-    }
-
-    .feature {
-      background: rgba(255,255,255,.9);
-      border: 1px solid #e4e9f0;
-      border-radius: 16px;
-      padding: 24px 18px;
-      text-align: center;
-      box-shadow: 0 8px 25px rgba(16,24,40,.04);
-    }
-
-    .feature-icon {
-      width: 52px;
-      height: 52px;
-      margin: auto auto 13px;
-      border-radius: 15px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #edf5ff;
-      font-size: 24px;
-    }
-
-    .feature h3 {
-      font-size: 16px;
-      margin-bottom: 6px;
-    }
-
-    .feature p {
-      font-size: 13px;
-      color: #667085;
-    }
-
-
-    /* ================= REVIEWS ================= */
-
-    .reviews {
-      display: grid;
-      grid-template-columns: repeat(3,1fr);
-      gap: 18px;
-    }
-
-    .review {
-      background: white;
-      border: 1px solid #e5eaf1;
-      border-radius: 17px;
-      padding: 22px;
-      box-shadow: 0 8px 25px rgba(16,24,40,.04);
-    }
-
-    .stars {
-      color: #f59e0b;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-    }
-
-    .review p {
-      color: #566579;
-      font-size: 14px;
-      margin-bottom: 15px;
-    }
-
-    .review strong {
-      font-size: 13px;
-    }
-
-
-    /* ================= FINAL CTA ================= */
-
-    .final-box {
-      max-width: 900px;
-      margin: 30px auto 70px;
-      padding: 45px 25px;
-      border-radius: 25px;
-      text-align: center;
-      background:
-        radial-gradient(circle at 10% 20%, rgba(37,99,235,.12), transparent 30%),
-        linear-gradient(135deg,#f7fbff,#eef8ff);
-      border: 1px solid #dce8f6;
-    }
-
-    .final-box h2 {
-      font-size: 34px;
-      margin-bottom: 10px;
-    }
-
-    .final-box p {
-      color: #667085;
-      margin-bottom: 22px;
-    }
-
-
-    /* ================= FLOATING WHATSAPP ================= */
-
-    .floating-whatsapp {
-      position: fixed;
-      right: 22px;
-      bottom: 25px;
-      width: 66px;
-      height: 66px;
-      border-radius: 50%;
-      background: #25D366;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 9999;
-      text-decoration: none;
-      box-shadow:
-        0 8px 25px rgba(37,211,102,.40),
-        0 0 0 7px rgba(37,211,102,.14);
-      animation: pulse 2s infinite;
-    }
-
-    .floating-whatsapp .wa-svg {
-      width: 36px;
-      height: 36px;
-    }
-
-    .wa-badge {
-      position: absolute;
-      right: -2px;
-      top: -3px;
-      width: 21px;
-      height: 21px;
-      border-radius: 50%;
-      background: #ef4444;
-      color: white;
-      border: 2px solid white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 11px;
-      font-weight: bold;
-    }
-
-    @keyframes pulse {
-      0% {
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Trade With Deepak Wadhwa</title>
+
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init','27780052548317434');
+fbq('track','PageView');
+</script>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:
+    radial-gradient(circle at 85% 5%,rgba(37,99,235,.13),transparent 30%),
+    radial-gradient(circle at 5% 45%,rgba(16,185,129,.10),transparent 30%),
+    #f8fafc;
+    color:#111827;
+}
+
+/* HEADER */
+
+header{
+    padding:20px 6%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(255,255,255,.9);
+    border-bottom:1px solid #e5e7eb;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:900;
+}
+
+.logo span{
+    color:#2563eb;
+}
+
+.badge{
+    background:#eafff4;
+    color:#07945b;
+    border:1px solid #bcefd4;
+    padding:8px 15px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:bold;
+}
+
+/* MAIN */
+
+.container{
+    width:min(1120px,92%);
+    margin:auto;
+}
+
+/* TOP OFFER */
+
+.top-offer{
+    margin-top:28px;
+    background:linear-gradient(135deg,#0f2d63,#174f9e);
+    border-radius:24px;
+    padding:35px 25px;
+    text-align:center;
+    color:white;
+    box-shadow:0 20px 50px rgba(15,45,99,.20);
+}
+
+.top-label{
+    display:inline-block;
+    background:rgba(255,255,255,.13);
+    border:1px solid rgba(255,255,255,.25);
+    padding:7px 16px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.top-offer h1{
+    font-size:clamp(28px,5vw,48px);
+    line-height:1.12;
+    font-weight:900;
+    margin-bottom:12px;
+}
+
+.top-offer h1 span{
+    color:#55e0a7;
+}
+
+.english{
+    font-size:20px;
+    font-weight:700;
+    margin-bottom:12px;
+}
+
+.hindi{
+    font-size:18px;
+    font-weight:700;
+    direction:ltr;
+}
+
+.offer-note{
+    margin-top:14px;
+    color:#d7e6ff;
+    font-size:11px;
+}
+
+/* WHATSAPP BUTTON */
+
+.whatsapp-main{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    margin-top:22px;
+    padding:17px 35px;
+    border-radius:13px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    font-size:17px;
+    font-weight:900;
+    box-shadow:0 12px 30px rgba(37,211,102,.35);
+    transition:.2s;
+}
+
+.whatsapp-main:hover{
+    transform:translateY(-3px);
+}
+
+.whatsapp-icon{
+    width:25px;
+    height:25px;
+    fill:white;
+}
+
+/* HERO */
+
+.hero{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    align-items:center;
+    padding:45px 0;
+}
+
+.hero h2{
+    font-size:clamp(40px,6vw,65px);
+    line-height:1;
+    letter-spacing:-2px;
+    margin-bottom:20px;
+}
+
+.hero h2 span{
+    color:#2563eb;
+}
+
+.hero p{
+    color:#64748b;
+    font-size:17px;
+    max-width:550px;
+}
+
+/* CHART */
+
+.chart-card{
+    background:white;
+    border:1px solid #e2e8f0;
+    border-radius:23px;
+    padding:20px;
+    box-shadow:0 15px 45px rgba(15,23,42,.08);
+}
+
+.chart-head{
+    display:flex;
+    justify-content:space-between;
+    margin-bottom:15px;
+    font-weight:bold;
+}
+
+.live{
+    color:#0b9b61;
+    font-size:12px;
+}
+
+.chart{
+    height:280px;
+    border-radius:15px;
+    overflow:hidden;
+    background:
+    linear-gradient(#e9eef5 1px,transparent 1px),
+    linear-gradient(90deg,#e9eef5 1px,transparent 1px);
+    background-size:45px 45px;
+}
+
+.chart svg{
+    width:100%;
+    height:100%;
+}
+
+/* FEATURES */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    margin-bottom:55px;
+}
+
+.feature{
+    background:white;
+    border:1px solid #e5eaf0;
+    border-radius:17px;
+    padding:22px 15px;
+    text-align:center;
+}
+
+.feature-icon{
+    font-size:28px;
+    margin-bottom:8px;
+}
+
+.feature h3{
+    font-size:15px;
+    margin-bottom:5px;
+}
+
+.feature p{
+    color:#718096;
+    font-size:12px;
+}
+
+/* REVIEWS */
+
+.section-title{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:25px;
+}
+
+.reviews{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:16px;
+    margin-bottom:55px;
+}
+
+.review{
+    background:white;
+    border:1px solid #e5eaf0;
+    border-radius:17px;
+    padding:22px;
+}
+
+.stars{
+    color:#f59e0b;
+    margin-bottom:10px;
+}
+
+.review p{
+    color:#64748b;
+    font-size:14px;
+}
+
+.review strong{
+    display:block;
+    margin-top:14px;
+}
+
+/* FINAL CTA */
+
+.final{
+    background:#102d63;
+    color:white;
+    border-radius:24px;
+    padding:42px 20px;
+    text-align:center;
+    margin-bottom:55px;
+}
+
+.final h2{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.final p{
+    color:#dce8ff;
+    margin-bottom:5px;
+}
+
+/* DISCLAIMER */
+
+.disclaimer{
+    text-align:center;
+    color:#8792a3;
+    font-size:11px;
+    max-width:800px;
+    margin:0 auto 30px;
+}
+
+/* FOOTER */
+
+footer{
+    background:white;
+    border-top:1px solid #e5e7eb;
+    text-align:center;
+    padding:25px;
+    color:#8994a5;
+    font-size:12px;
+}
+
+/* FLOATING WHATSAPP */
+
+.floating-whatsapp{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    width:67px;
+    height:67px;
+    border-radius:50%;
+    background:#25D366;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+    box-shadow:
+    0 10px 30px rgba(37,211,102,.4),
+    0 0 0 7px rgba(37,211,102,.12);
+    animation:pulse 2s infinite;
+}
+
+.floating-whatsapp svg{
+    width:37px;
+    height:37px;
+    fill:white;
+}
+
+@keyframes pulse{
+    0%{
         box-shadow:
-          0 8px 25px rgba(37,211,102,.40),
-          0 0 0 7px rgba(37,211,102,.14);
-      }
-
-      50% {
+        0 10px 30px rgba(37,211,102,.4),
+        0 0 0 7px rgba(37,211,102,.12);
+    }
+    50%{
         box-shadow:
-          0 10px 30px rgba(37,211,102,.45),
-          0 0 0 13px rgba(37,211,102,.06);
-      }
-
-      100% {
+        0 10px 30px rgba(37,211,102,.45),
+        0 0 0 14px rgba(37,211,102,.04);
+    }
+    100%{
         box-shadow:
-          0 8px 25px rgba(37,211,102,.40),
-          0 0 0 7px rgba(37,211,102,.14);
-      }
+        0 10px 30px rgba(37,211,102,.4),
+        0 0 0 7px rgba(37,211,102,.12);
+    }
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .hero{
+        grid-template-columns:1fr;
     }
 
-
-    /* ================= FOOTER ================= */
-
-    footer {
-      text-align: center;
-      padding: 30px 20px 100px;
-      border-top: 1px solid #e8edf3;
-      color: #7b8797;
-      font-size: 12px;
+    .features{
+        grid-template-columns:repeat(2,1fr);
     }
 
-
-    /* ================= MOBILE ================= */
-
-    @media(max-width:850px) {
-
-      header {
-        padding: 18px 20px;
-      }
-
-      .top-badge {
-        font-size: 11px;
-        padding: 7px 12px;
-      }
-
-      .hero {
-        grid-template-columns: 1fr;
-        padding-top: 30px;
-        gap: 35px;
-      }
-
-      h1 {
-        font-size: 48px;
-        letter-spacing: -2px;
-      }
-
-      .chart-card {
-        order: 2;
-      }
-
-      .features {
-        grid-template-columns: repeat(2,1fr);
-      }
-
-      .reviews {
-        grid-template-columns: 1fr;
-      }
-
-      .main-whatsapp {
-        min-width: 0;
-        width: 100%;
-      }
+    .reviews{
+        grid-template-columns:1fr;
     }
 
+}
 
-    @media(max-width:500px) {
+@media(max-width:500px){
 
-      .brand {
-        font-size: 17px;
-      }
-
-      .brand-icon {
-        width: 38px;
-        height: 38px;
-      }
-
-      h1 {
-        font-size: 42px;
-      }
-
-      .hero-description {
-        font-size: 16px;
-      }
-
-      .features {
-        grid-template-columns: 1fr;
-      }
-
-      .chart-area {
-        height: 260px;
-      }
-
-      .chart-bottom {
-        grid-template-columns: 1fr;
-      }
-
-      .investment-cta {
-        align-items: flex-start;
-      }
-
-      .floating-whatsapp {
-        width: 60px;
-        height: 60px;
-        right: 17px;
-        bottom: 18px;
-      }
+    header{
+        padding:17px 5%;
     }
 
-  </style>
+    .logo{
+        font-size:17px;
+    }
+
+    .badge{
+        font-size:10px;
+        padding:6px 9px;
+    }
+
+    .top-offer{
+        padding:28px 16px;
+    }
+
+    .top-offer h1{
+        font-size:29px;
+    }
+
+    .english{
+        font-size:16px;
+    }
+
+    .hindi{
+        font-size:15px;
+    }
+
+    .hero h2{
+        font-size:43px;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .floating-whatsapp{
+        width:61px;
+        height:61px;
+        right:17px;
+        bottom:18px;
+    }
+
+}
+
+</style>
 </head>
-
 
 <body>
 
+<header>
 
-  <!-- ================= HEADER ================= -->
+    <div class="logo">
+        Trade With <span>Deepak Wadhwa</span>
+    </div>
 
-  <header>
+    <div class="badge">
+        ● MARKET INSIGHTS
+    </div>
 
-    <div class="brand">
+</header>
 
-      <div class="brand-icon">
 
-        <svg width="25" height="25" viewBox="0 0 24 24"
-             fill="none" stroke="white" stroke-width="2.5"
-             stroke-linecap="round" stroke-linejoin="round">
+<main class="container">
 
-          <polyline points="3 17 9 11 13 15 21 7"></polyline>
-          <polyline points="14 7 21 7 21 14"></polyline>
 
-        </svg>
+<!-- ================= TOP FIRST IMPRESSION ================= -->
 
-      </div>
+<section class="top-offer">
 
-      Trading <span>Insights</span>
+    <div class="top-label">
+        📈 TRADING OPPORTUNITY
+    </div>
 
+    <h1>
+        Invest ₹1,000 in Share Market<br>
+        <span>and Earn Up To ₹15,000</span>
+    </h1>
+
+    <div class="english">
+        Invest ₹1,000 in the Share Market and earn up to ₹15,000.
+        Message us on WhatsApp to know more.
+    </div>
+
+    <div class="hindi">
+        शेयर मार्केट में ₹1,000 निवेश करके ₹15,000 तक कमाने
+        के बारे में जानने के लिए WhatsApp पर मैसेज करें।
     </div>
 
 
-    <div class="top-badge">
-      ● MARKET INSIGHTS
-    </div>
+    <a
+      class="whatsapp-main"
+      href="https://wa.me/918850960591?text=What%20is%20the%20minimum%20investment%20sir%3F"
+      target="_blank"
+      onclick="trackWhatsApp()"
+    >
 
-  </header>
-
-
-
-  <!-- ================= HERO ================= -->
-
-  <main>
-
-    <section class="hero">
-
-
-      <!-- LEFT -->
-
-      <div class="hero-left">
-
-        <div class="small-badge">
-          <span class="green-dot"></span>
-          Trading Education & Market Guidance
-        </div>
-
-
-        <h1>
-          Learn Trading.<br>
-          <span class="blue">Understand</span>
-          <span class="green">Markets.</span>
-        </h1>
-
-
-        <p class="hero-description">
-          Explore market strategies, trading concepts and risk
-          management with practical guidance designed for
-          people who want to understand the market better.
-        </p>
-
-
-        <!-- ATTRACTIVE LINE -->
-
-        <div class="investment-cta">
-
-          <div class="cta-icon">
-            📈
-          </div>
-
-          <div>
-
-            <h3>
-              ₹1,000 Se Trading Ki Shuruaat Karein
-            </h3>
-
-            <p>
-              Potential returns aur trading opportunities ke
-              baare mein jaankari ke liye WhatsApp par message karein.
-            </p>
-
-          </div>
-
-        </div>
-
-
-        <!-- MAIN WHATSAPP -->
-
-        <a
-          class="main-whatsapp"
-          href="https://wa.me/918850960591?text=What%20is%20the%20minimum%20investment%20sir%3F"
-          target="_blank"
-          onclick="trackWhatsAppClick()"
-        >
-
-          <svg class="wa-svg"
-               viewBox="0 0 32 32">
-
+        <svg class="whatsapp-icon" viewBox="0 0 32 32">
             <path d="M19.11 17.21c-.27-.14-1.58-.78-1.83-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.34-.79-.7-1.32-1.56-1.47-1.83-.15-.27-.02-.42.11-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29 0 1.35.98 2.65 1.12 2.83.14.18 1.93 2.95 4.68 4.13.65.28 1.16.45 1.56.58.66.21 1.26.18 1.73.11.53-.08 1.58-.65 1.8-1.28.22-.63.22-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
-
             <path d="M16.02 3C8.83 3 3 8.83 3 16.02c0 2.3.6 4.47 1.65 6.35L3 29l6.82-1.6a12.96 12.96 0 0 0 6.2 1.57h.01c7.19 0 13.02-5.83 13.02-13.02S23.21 3 16.02 3zm0 23.65h-.01c-2.04 0-4.04-.55-5.79-1.59l-.42-.25-4.05.95.96-3.95-.27-.41a10.8 10.8 0 1 1 9.58 5.25z"/>
-
-          </svg>
-
-          Message Us on WhatsApp
-
-        </a>
-
-
-        <div class="risk-note">
-          ⚠️ Trading involves market risk. Returns are not guaranteed.
-        </div>
-
-      </div>
-
-
-
-      <!-- RIGHT CHART -->
-
-      <div class="chart-card">
-
-        <div class="chart-header">
-
-          <div class="chart-title">
-            Market Overview
-          </div>
-
-          <div class="live">
-            <span class="live-dot"></span>
-            LIVE MARKET
-          </div>
-
-        </div>
-
-
-        <div class="chart-area">
-
-          <svg
-            class="chart-svg"
-            viewBox="0 0 600 330"
-            preserveAspectRatio="none"
-          >
-
-            <defs>
-
-              <linearGradient
-                id="areaGradient"
-                x1="0"
-                y1="0"
-                x2="0"
-                y2="1"
-              >
-
-                <stop
-                  offset="0%"
-                  stop-color="#16c784"
-                  stop-opacity=".25"
-                />
-
-                <stop
-                  offset="100%"
-                  stop-color="#16c784"
-                  stop-opacity="0"
-                />
-
-              </linearGradient>
-
-            </defs>
-
-
-            <!-- AREA -->
-
-            <path
-              d="
-              M0 270
-              L35 250
-              L65 260
-              L95 220
-              L125 235
-              L155 190
-              L185 205
-              L215 165
-              L245 185
-              L275 135
-              L305 150
-              L335 120
-              L365 138
-              L395 92
-              L425 110
-              L455 75
-              L485 90
-              L515 50
-              L550 67
-              L600 30
-              L600 330
-              L0 330 Z
-              "
-              fill="url(#areaGradient)"
-            />
-
-
-            <!-- LINE -->
-
-            <path
-              d="
-              M0 270
-              L35 250
-              L65 260
-              L95 220
-              L125 235
-              L155 190
-              L185 205
-              L215 165
-              L245 185
-              L275 135
-              L305 150
-              L335 120
-              L365 138
-              L395 92
-              L425 110
-              L455 75
-              L485 90
-              L515 50
-              L550 67
-              L600 30
-              "
-              fill="none"
-              stroke="#16a36a"
-              stroke-width="5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-
-
-            <!-- ARROW -->
-
-            <line
-              x1="500"
-              y1="80"
-              x2="575"
-              y2="25"
-              stroke="#2563eb"
-              stroke-width="3"
-              stroke-linecap="round"
-            />
-
-            <polygon
-              points="575,25 558,29 569,42"
-              fill="#2563eb"
-            />
-
-          </svg>
-
-        </div>
-
-
-        <div class="chart-bottom">
-
-          <div class="mini-stat">
-
-            <small>Market Trend</small>
-
-            <strong class="positive">
-              ↗ Positive
-            </strong>
-
-          </div>
-
-
-          <div class="mini-stat">
-
-            <small>Strategy</small>
-
-            <strong>
-              Risk Managed
-            </strong>
-
-          </div>
-
-
-          <div class="mini-stat">
-
-            <small>Focus</small>
-
-            <strong>
-              Learning
-            </strong>
-
-          </div>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ================= FEATURES ================= -->
-
-    <section class="section">
-
-      <div class="section-heading">
-
-        <h2>
-          Why Learn With Us?
-        </h2>
-
-        <p>
-          Focus on knowledge, discipline and better decision making.
-        </p>
-
-      </div>
-
-
-      <div class="features">
-
-        <div class="feature">
-
-          <div class="feature-icon">
-            📊
-          </div>
-
-          <h3>
-            Market Analysis
-          </h3>
-
-          <p>
-            Understand market movements and basic analysis concepts.
-          </p>
-
-        </div>
-
-
-        <div class="feature">
-
-          <div class="feature-icon">
-            🛡️
-          </div>
-
-          <h3>
-            Risk Management
-          </h3>
-
-          <p>
-            Learn why capital protection matters in trading.
-          </p>
-
-        </div>
-
-
-        <div class="feature">
-
-          <div class="feature-icon">
-            🎯
-          </div>
-
-          <h3>
-            Trading Discipline
-          </h3>
-
-          <p>
-            Build a structured approach instead of emotional decisions.
-          </p>
-
-        </div>
-
-
-        <div class="feature">
-
-          <div class="feature-icon">
-            📚
-          </div>
-
-          <h3>
-            Practical Learning
-          </h3>
-
-          <p>
-            Learn trading concepts in a simple and practical way.
-          </p>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ================= REVIEWS ================= -->
-
-    <section class="section">
-
-      <div class="section-heading">
-
-        <h2>
-          What Learners Say
-        </h2>
-
-        <p>
-          Feedback from people exploring trading education.
-        </p>
-
-      </div>
-
-
-      <div class="reviews">
-
-
-        <div class="review">
-
-          <div class="stars">
-            ★★★★★
-          </div>
-
-          <p>
-            “The concepts were explained in a simple way and
-            helped me understand market basics better.”
-          </p>
-
-          <strong>
-            — Trading Learner
-          </strong>
-
-        </div>
-
-
-        <div class="review">
-
-          <div class="stars">
-            ★★★★★
-          </div>
-
-          <p>
-            “I liked the focus on discipline and risk management
-            rather than just looking at profits.”
-          </p>
-
-          <strong>
-            — Market Learner
-          </strong>
-
-        </div>
-
-
-        <div class="review">
-
-          <div class="stars">
-            ★★★★★
-          </div>
-
-          <p>
-            “The guidance made it easier for me to understand
-            how trading decisions should be approached.”
-          </p>
-
-          <strong>
-            — Trading Learner
-          </strong>
-
-        </div>
-
-
-      </div>
-
-    </section>
-
-
-
-    <!-- ================= FINAL CTA ================= -->
-
-    <section class="final-box">
-
-      <h2>
-        Want To Know The Minimum Investment?
-      </h2>
-
-      <p>
-        WhatsApp par message karke trading process,
-        minimum investment aur available guidance ke baare mein poochhein.
-      </p>
-
-
-      <a
-        class="main-whatsapp"
-        href="https://wa.me/918850960591?text=What%20is%20the%20minimum%20investment%20sir%3F"
-        target="_blank"
-        onclick="trackWhatsAppClick()"
-      >
-
-        <svg class="wa-svg"
-             viewBox="0 0 32 32">
-
-          <path d="M19.11 17.21c-.27-.14-1.58-.78-1.83-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.34-.79-.7-1.32-1.56-1.47-1.83-.15-.27-.02-.42.11-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29 0 1.35.98 2.65 1.12 2.83.14.18 1.93 2.95 4.68 4.13.65.28 1.16.45 1.56.58.66.21 1.26.18 1.73.11.53-.08 1.58-.65 1.8-1.28.22-.63.22-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
-
-          <path d="M16.02 3C8.83 3 3 8.83 3 16.02c0 2.3.6 4.47 1.65 6.35L3 29l6.82-1.6a12.96 12.96 0 0 0 6.2 1.57h.01c7.19 0 13.02-5.83 13.02-13.02S23.21 3 16.02 3zm0 23.65h-.01c-2.04 0-4.04-.55-5.79-1.59l-.42-.25-4.05.95.96-3.95-.27-.41a10.8 10.8 0 1 1 9.58 5.25z"/>
-
         </svg>
 
         WhatsApp Par Message Karein
 
-      </a>
+    </a>
 
-    </section>
+    <div class="offer-note">
+        Trading involves market risk. Returns are not guaranteed.
+    </div>
 
-  </main>
+</section>
 
 
+<!-- ================= HERO ================= -->
 
-  <!-- ================= FOOTER ================= -->
+<section class="hero">
 
-  <footer>
+    <div>
+
+        <h2>
+            TRADE WITH<br>
+            <span>DEEPAK WADHWA</span>
+        </h2>
+
+        <p>
+            Learn about market movements, trading concepts,
+            strategy and risk management with simple and practical guidance.
+        </p>
+
+    </div>
+
+
+    <!-- CHART -->
+
+    <div class="chart-card">
+
+        <div class="chart-head">
+
+            <span>
+                Market Overview
+            </span>
+
+            <span class="live">
+                ● MARKET VIEW
+            </span>
+
+        </div>
+
+
+        <div class="chart">
+
+            <svg viewBox="0 0 600 280"
+                 preserveAspectRatio="none">
+
+                <defs>
+
+                    <linearGradient
+                        id="gradient"
+                        x1="0"
+                        y1="0"
+                        x2="0"
+                        y2="1">
+
+                        <stop
+                            offset="0%"
+                            stop-color="#16a36a"
+                            stop-opacity=".22"/>
+
+                        <stop
+                            offset="100%"
+                            stop-color="#16a36a"
+                            stop-opacity="0"/>
+
+                    </linearGradient>
+
+                </defs>
+
+
+                <path
+                    d="M0 235
+                    L35 220
+                    L70 230
+                    L105 190
+                    L140 205
+                    L175 160
+                    L210 175
+                    L245 135
+                    L280 150
+                    L315 110
+                    L350 125
+                    L385 85
+                    L420 105
+                    L455 65
+                    L490 78
+                    L525 45
+                    L560 58
+                    L600 25
+                    L600 280
+                    L0 280 Z"
+                    fill="url(#gradient)"
+                />
+
+
+                <path
+                    d="M0 235
+                    L35 220
+                    L70 230
+                    L105 190
+                    L140 205
+                    L175 160
+                    L210 175
+                    L245 135
+                    L280 150
+                    L315 110
+                    L350 125
+                    L385 85
+                    L420 105
+                    L455 65
+                    L490 78
+                    L525 45
+                    L560 58
+                    L600 25"
+                    fill="none"
+                    stroke="#16a36a"
+                    stroke-width="5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+
+            </svg>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section>
+
+    <div class="section-title">
+        Why Choose Our Guidance?
+    </div>
+
+
+    <div class="features">
+
+        <div class="feature">
+            <div class="feature-icon">📊</div>
+            <h3>Market Analysis</h3>
+            <p>Understand market movements and trends.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">🛡️</div>
+            <h3>Risk Management</h3>
+            <p>Learn responsible risk management concepts.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">🎯</div>
+            <h3>Trading Discipline</h3>
+            <p>Develop a structured trading approach.</p>
+        </div>
+
+        <div class="feature">
+            <div class="feature-icon">📚</div>
+            <h3>Practical Learning</h3>
+            <p>Understand trading in a simple way.</p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= REVIEWS ================= -->
+
+<section style="margin-top:55px;">
+
+    <div class="section-title">
+        ⭐ What Learners Say
+    </div>
+
+
+    <div class="reviews">
+
+        <div class="review">
+            <div class="stars">★★★★★</div>
+            <p>
+                Easy-to-understand explanations helped me
+                understand basic market concepts.
+            </p>
+            <strong>— Trading Learner</strong>
+        </div>
+
+
+        <div class="review">
+            <div class="stars">★★★★★</div>
+            <p>
+                I liked the focus on discipline and risk management.
+            </p>
+            <strong>— Market Learner</strong>
+        </div>
+
+
+        <div class="review">
+            <div class="stars">★★★★★</div>
+            <p>
+                The guidance made trading concepts easier to understand.
+            </p>
+            <strong>— Trading Learner</strong>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FINAL CTA ================= -->
+
+<section class="final">
+
+    <h2>
+        Want To Know More?
+    </h2>
 
     <p>
-      © 2026 Trading Insights. All rights reserved.
+        Minimum investment aur trading opportunities ke baare mein
+        WhatsApp par message karein.
     </p>
 
-    <p style="margin-top:7px;">
-      Trading involves risk. Past performance does not guarantee
-      future results. Please make decisions according to your
-      own financial situation and risk tolerance.
-    </p>
 
-  </footer>
-
-
-
-  <!-- ================= FLOATING WHATSAPP ================= -->
-
-  <a
-    class="floating-whatsapp"
-    href="https://wa.me/918850960591?text=What%20is%20the%20minimum%20investment%20sir%3F"
-    target="_blank"
-    aria-label="Chat on WhatsApp"
-    onclick="trackWhatsAppClick()"
-  >
-
-    <svg
-      class="wa-svg"
-      viewBox="0 0 32 32"
+    <a
+      class="whatsapp-main"
+      href="https://wa.me/918850960591?text=What%20is%20the%20minimum%20investment%20sir%3F"
+      target="_blank"
+      onclick="trackWhatsApp()"
     >
 
-      <path d="M19.11 17.21c-.27-.14-1.58-.78-1.83-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.34-.79-.7-1.32-1.56-1.47-1.83-.15-.27-.02-.42.11-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29 0 1.35.98 2.65 1.12 2.83.14.18 1.93 2.95 4.68 4.13.65.28 1.16.45 1.56.58.66.21 1.26.18 1.73.11.53-.08 1.58-.65 1.8-1.28.22-.63.22-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
+        <svg class="whatsapp-icon" viewBox="0 0 32 32">
+            <path d="M19.11 17.21c-.27-.14-1.58-.78-1.83-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.34-.79-.7-1.32-1.56-1.47-1.83-.15-.27-.02-.42.11-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29 0 1.35.98 2.65 1.12 2.83.14.18 1.93 2.95 4.68 4.13.65.28 1.16.45 1.56.58.66.21 1.58-.65 1.8-1.28.22-.63.22-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
+            <path d="M16.02 3C8.83 3 3 8.83 3 16.02c0 2.3.6 4.47 1.65 6.35L3 29l6.82-1.6a12.96 12.96 0 0 0 6.2 1.57h.01c7.19 0 13.02-5.83 13.02-13.02S23.21 3 16.02 3zm0 23.65h-.01c-2.04 0-4.04-.55-5.79-1.59l-.42-.25-4.05.95.96-3.95-.27-.41a10.8 10.8 0 1 1 9.58 5.25z"/>
+        </svg>
 
-      <path d="M16.02 3C8.83 3 3 8.83 3 16.02c0 2.3.6 4.47 1.65 6.35L3 29l6.82-1.6a12.96 12.96 0 0 0 6.2 1.57h.01c7.19 0 13.02-5.83 13.02-13.02S23.21 3 16.02 3zm0 23.65h-.01c-2.04 0-4.04-.55-5.79-1.59l-.42-.25-4.05.95.96-3.95-.27-.41a10.8 10.8 0 1 1 9.58 5.25z"/>
+        WhatsApp Par Message Karein
+
+    </a>
+
+</section>
+
+
+<!-- DISCLAIMER -->
+
+<div class="disclaimer">
+    ⚠️ Trading and investments involve market risk. The displayed
+    ₹15,000 figure is not a guaranteed return. Actual results may vary.
+    Please make decisions according to your own risk tolerance.
+</div>
+
+</main>
+
+
+<footer>
+    © 2026 Trade With Deepak Wadhwa
+</footer>
+
+
+<!-- ================= FLOATING WHATSAPP ================= -->
+
+<a
+  class="floating-whatsapp"
+  href="https://wa.me/918850960591?text=What%20is%20the%20minimum%20investment%20sir%3F"
+  target="_blank"
+  onclick="trackWhatsApp()"
+  aria-label="WhatsApp"
+>
+
+    <svg viewBox="0 0 32 32">
+
+        <path d="M19.11 17.21c-.27-.14-1.58-.78-1.83-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.34-.79-.7-1.32-1.56-1.47-1.83-.15-.27-.02-.42.11-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29 0 1.35.98 2.65 1.12 2.83.14.18 1.93 2.95 4.68 4.13.65.28 1.16.45 1.56.58.66.21 1.58.18 1.73.11.53-.08 1.58-.65 1.8-1.28.22-.63.22-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
+
+        <path d="M16.02 3C8.83 3 3 8.83 3 16.02c0 2.3.6 4.47 1.65 6.35L3 29l6.82-1.6a12.96 12.96 0 0 0 6.2 1.57h.01c7.19 0 13.02-5.83 13.02-13.02S23.21 3 16.02 3zm0 23.65h-.01c-2.04 0-4.04-.55-5.79-1.59l-.42-.25-4.05.95.96-3.95-.27-.41a10.8 10.8 0 1 1 9.58 5.25z"/>
 
     </svg>
 
-
-    <span class="wa-badge">
-      1
-    </span>
-
-  </a>
+</a>
 
 
+<script>
 
-  <!-- ================= PIXEL EVENT ================= -->
+function trackWhatsApp(){
 
-  <script>
-
-    function trackWhatsAppClick() {
-
-      if (typeof fbq === "function") {
-
-        fbq('track', 'Contact');
-
-      }
-
+    if(typeof fbq === "function"){
+        fbq('track','Contact');
     }
 
-  </script>
+}
 
+</script>
 
 </body>
 </html>
