@@ -1,12 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Trade With Deepak Wadhwa</title>
 
-<!-- Meta Pixel -->
+<meta name="description"
+content="Trading education, market insights and practical guidance. Connect with us on WhatsApp.">
+
+
+<!-- ================= META PIXEL ================= -->
+
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -15,14 +21,27 @@ if(!f._fbq)f._fbq=n;
 n.push=n;n.loaded=!0;n.version='2.0';
 n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
+s.parentNode.insertBefore(t,s)}
+(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 
 fbq('init','27780052548317434');
 fbq('track','PageView');
 </script>
 
+<noscript>
+<img
+height="1"
+width="1"
+style="display:none"
+src="https://www.facebook.com/tr?id=27780052548317434&ev=PageView&noscript=1"
+/>
+</noscript>
+
+
 <style>
+
+/* ================= RESET ================= */
 
 *{
     margin:0;
@@ -30,422 +49,943 @@ fbq('track','PageView');
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:Arial,Helvetica,sans-serif;
     background:
-    radial-gradient(circle at 85% 5%,rgba(37,99,235,.13),transparent 30%),
-    radial-gradient(circle at 5% 45%,rgba(16,185,129,.10),transparent 30%),
+    radial-gradient(
+        circle at 85% 5%,
+        rgba(37,99,235,.13),
+        transparent 30%
+    ),
+    radial-gradient(
+        circle at 5% 45%,
+        rgba(16,185,129,.10),
+        transparent 30%
+    ),
     #f8fafc;
-    color:#111827;
+
+    color:#101828;
+    line-height:1.6;
 }
 
-/* HEADER */
+
+/* ================= HEADER ================= */
 
 header{
+
+    width:100%;
+
     padding:20px 6%;
+
     display:flex;
+
     justify-content:space-between;
     align-items:center;
-    background:rgba(255,255,255,.9);
+
+    background:rgba(255,255,255,.92);
+
     border-bottom:1px solid #e5e7eb;
+
+    position:relative;
+
+    z-index:20;
 }
 
 .logo{
-    font-size:22px;
+
+    font-size:21px;
+
     font-weight:900;
+
+    color:#111827;
 }
 
 .logo span{
+
     color:#2563eb;
 }
 
-.badge{
+.header-badge{
+
     background:#eafff4;
+
     color:#07945b;
+
     border:1px solid #bcefd4;
+
     padding:8px 15px;
+
     border-radius:30px;
+
     font-size:12px;
-    font-weight:bold;
+
+    font-weight:800;
 }
 
-/* MAIN */
 
-.container{
+/* ================= TOP MESSAGE ================= */
+
+.top-section{
+
     width:min(1120px,92%);
-    margin:auto;
-}
 
-/* TOP OFFER */
+    margin:28px auto 0;
 
-.top-offer{
-    margin-top:28px;
-    background:linear-gradient(135deg,#0f2d63,#174f9e);
-    border-radius:24px;
-    padding:35px 25px;
+    padding:38px 25px;
+
+    border-radius:25px;
+
     text-align:center;
+
     color:white;
-    box-shadow:0 20px 50px rgba(15,45,99,.20);
+
+    background:
+    radial-gradient(
+        circle at 10% 10%,
+        rgba(255,255,255,.12),
+        transparent 25%
+    ),
+    linear-gradient(
+        135deg,
+        #0c2b62,
+        #1762c5
+    );
+
+    box-shadow:
+    0 22px 60px rgba(16,55,120,.22);
+
+    overflow:hidden;
 }
 
-.top-label{
+.top-tag{
+
     display:inline-block;
-    background:rgba(255,255,255,.13);
-    border:1px solid rgba(255,255,255,.25);
+
     padding:7px 16px;
+
     border-radius:30px;
-    font-size:12px;
-    font-weight:bold;
-    margin-bottom:15px;
-}
 
-.top-offer h1{
-    font-size:clamp(28px,5vw,48px);
-    line-height:1.12;
-    font-weight:900;
-    margin-bottom:12px;
-}
+    background:rgba(255,255,255,.12);
 
-.top-offer h1 span{
-    color:#55e0a7;
-}
+    border:1px solid rgba(255,255,255,.22);
 
-.english{
-    font-size:20px;
-    font-weight:700;
-    margin-bottom:12px;
-}
-
-.hindi{
-    font-size:18px;
-    font-weight:700;
-    direction:ltr;
-}
-
-.offer-note{
-    margin-top:14px;
-    color:#d7e6ff;
     font-size:11px;
+
+    font-weight:800;
+
+    letter-spacing:.5px;
+
+    margin-bottom:14px;
 }
 
-/* WHATSAPP BUTTON */
+.top-section h1{
 
-.whatsapp-main{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    gap:10px;
-    margin-top:22px;
-    padding:17px 35px;
-    border-radius:13px;
-    background:#25D366;
-    color:white;
-    text-decoration:none;
-    font-size:17px;
+    font-size:clamp(29px,5vw,48px);
+
+    line-height:1.12;
+
     font-weight:900;
-    box-shadow:0 12px 30px rgba(37,211,102,.35);
-    transition:.2s;
+
+    margin-bottom:15px;
+
+    letter-spacing:-1px;
 }
 
-.whatsapp-main:hover{
+.top-section h1 span{
+
+    color:#50e0a4;
+}
+
+.english-text{
+
+    max-width:850px;
+
+    margin:auto;
+
+    font-size:19px;
+
+    font-weight:700;
+
+    line-height:1.5;
+}
+
+.hindi-text{
+
+    max-width:850px;
+
+    margin:10px auto 0;
+
+    font-size:17px;
+
+    font-weight:700;
+
+    line-height:1.6;
+}
+
+.top-note{
+
+    margin-top:12px;
+
+    color:#d8e7ff;
+
+    font-size:10px;
+}
+
+
+/* ================= WHATSAPP BUTTON ================= */
+
+.whatsapp-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:10px;
+
+    margin-top:22px;
+
+    padding:17px 32px;
+
+    background:#25D366;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border-radius:13px;
+
+    font-size:17px;
+
+    font-weight:900;
+
+    box-shadow:
+    0 12px 30px rgba(37,211,102,.35);
+
+    transition:.25s;
+}
+
+.whatsapp-button:hover{
+
     transform:translateY(-3px);
+
+    box-shadow:
+    0 18px 35px rgba(37,211,102,.42);
 }
 
-.whatsapp-icon{
+.wa-icon{
+
     width:25px;
+
     height:25px;
+
     fill:white;
 }
 
-/* HERO */
+
+/* ================= HERO ================= */
 
 .hero{
+
+    width:min(1120px,92%);
+
+    margin:auto;
+
+    padding:60px 0 45px;
+
     display:grid;
+
     grid-template-columns:1fr 1fr;
-    gap:35px;
+
+    gap:45px;
+
     align-items:center;
-    padding:45px 0;
 }
 
 .hero h2{
-    font-size:clamp(40px,6vw,65px);
-    line-height:1;
-    letter-spacing:-2px;
-    margin-bottom:20px;
+
+    font-size:clamp(42px,6vw,68px);
+
+    line-height:.98;
+
+    letter-spacing:-3px;
+
+    color:#111827;
+
+    margin-bottom:22px;
 }
 
 .hero h2 span{
+
     color:#2563eb;
 }
 
-.hero p{
-    color:#64748b;
+.hero-description{
+
+    color:#59687d;
+
     font-size:17px;
-    max-width:550px;
+
+    line-height:1.7;
+
+    max-width:560px;
 }
 
-/* CHART */
 
-.chart-card{
-    background:white;
-    border:1px solid #e2e8f0;
-    border-radius:23px;
-    padding:20px;
-    box-shadow:0 15px 45px rgba(15,23,42,.08);
+/* ================= TRADING CONTENT ================= */
+
+.trading-content{
+
+    width:min(1120px,92%);
+
+    margin:auto;
+
+    padding:25px 0 60px;
 }
 
-.chart-head{
-    display:flex;
-    justify-content:space-between;
-    margin-bottom:15px;
-    font-weight:bold;
+.content-card{
+
+    background:#fff;
+
+    border:1px solid #e3e8ef;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    box-shadow:
+    0 15px 45px rgba(16,24,40,.06);
 }
 
-.live{
-    color:#0b9b61;
-    font-size:12px;
-}
+.content-title{
 
-.chart{
-    height:280px;
-    border-radius:15px;
-    overflow:hidden;
-    background:
-    linear-gradient(#e9eef5 1px,transparent 1px),
-    linear-gradient(90deg,#e9eef5 1px,transparent 1px);
-    background-size:45px 45px;
-}
+    font-size:30px;
 
-.chart svg{
-    width:100%;
-    height:100%;
-}
+    font-weight:900;
 
-/* FEATURES */
-
-.features{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:15px;
-    margin-bottom:55px;
-}
-
-.feature{
-    background:white;
-    border:1px solid #e5eaf0;
-    border-radius:17px;
-    padding:22px 15px;
     text-align:center;
-}
 
-.feature-icon{
-    font-size:28px;
+    color:#111827;
+
     margin-bottom:8px;
 }
 
-.feature h3{
-    font-size:15px;
-    margin-bottom:5px;
-}
+.content-subtitle{
 
-.feature p{
-    color:#718096;
-    font-size:12px;
-}
-
-/* REVIEWS */
-
-.section-title{
     text-align:center;
-    font-size:32px;
+
+    color:#6b7280;
+
+    font-size:14px;
+
     margin-bottom:25px;
 }
 
-.reviews{
+.content-points{
+
     display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:16px;
-    margin-bottom:55px;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:13px;
+
+    max-width:700px;
+
+    margin:auto;
+}
+
+.content-point{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    padding:15px;
+
+    border-radius:13px;
+
+    background:#f7faff;
+
+    border:1px solid #e4ebf5;
+
+    font-weight:800;
+
+    color:#1f355c;
+}
+
+.point-icon{
+
+    width:38px;
+
+    height:38px;
+
+    min-width:38px;
+
+    border-radius:10px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:#e8f2ff;
+
+    font-size:18px;
+}
+
+
+/* ================= MARKET CHART ================= */
+
+.market-section{
+
+    width:min(1120px,92%);
+
+    margin:auto;
+
+    padding:20px 0 65px;
+}
+
+.section-title{
+
+    text-align:center;
+
+    font-size:34px;
+
+    font-weight:900;
+
+    color:#101828;
+
+    margin-bottom:8px;
+}
+
+.section-subtitle{
+
+    text-align:center;
+
+    color:#6b7280;
+
+    font-size:14px;
+
+    margin-bottom:28px;
+}
+
+.chart-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+}
+
+.chart-card{
+
+    background:#0e192b;
+
+    border-radius:22px;
+
+    padding:20px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 18px 50px rgba(15,23,42,.18);
+}
+
+.chart-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    color:#fff;
+
+    margin-bottom:15px;
+}
+
+.chart-name{
+
+    font-weight:800;
+}
+
+.live{
+
+    color:#35dc98;
+
+    font-size:11px;
+
+    font-weight:800;
+}
+
+.chart{
+
+    height:230px;
+
+    border-radius:13px;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        rgba(255,255,255,.06) 1px,
+        transparent 1px
+    ),
+    linear-gradient(
+        90deg,
+        rgba(255,255,255,.06) 1px,
+        transparent 1px
+    );
+
+    background-size:40px 40px;
+}
+
+.chart svg{
+
+    width:100%;
+
+    height:100%;
+}
+
+
+/* ================= PHOTOS ================= */
+
+.photos-section{
+
+    width:min(1120px,92%);
+
+    margin:auto;
+
+    padding:25px 0 60px;
+}
+
+.photos-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:18px;
+}
+
+.photo-card{
+
+    position:relative;
+
+    background:#fff;
+
+    padding:8px;
+
+    border-radius:20px;
+
+    border:1px solid #e1e8f0;
+
+    box-shadow:
+    0 15px 40px rgba(16,24,40,.10);
+
+    overflow:hidden;
+
+    transition:.25s;
+}
+
+.photo-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 22px 50px rgba(16,24,40,.15);
+}
+
+.photo-card img{
+
+    display:block;
+
+    width:100%;
+
+    height:380px;
+
+    object-fit:cover;
+
+    object-position:top;
+
+    border-radius:15px;
+}
+
+.photo-caption{
+
+    padding:12px 10px 8px;
+
+    text-align:center;
+
+    font-size:13px;
+
+    font-weight:800;
+
+    color:#243b63;
+}
+
+
+/* ================= REVIEWS ================= */
+
+.reviews-section{
+
+    width:min(1120px,92%);
+
+    margin:auto;
+
+    padding:20px 0 65px;
+}
+
+.reviews-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:17px;
 }
 
 .review{
-    background:white;
-    border:1px solid #e5eaf0;
-    border-radius:17px;
-    padding:22px;
+
+    background:#fff;
+
+    border:1px solid #e3e8ef;
+
+    border-radius:18px;
+
+    padding:23px;
+
+    box-shadow:
+    0 10px 30px rgba(16,24,40,.05);
 }
 
 .stars{
+
     color:#f59e0b;
+
+    font-size:17px;
+
+    letter-spacing:2px;
+
     margin-bottom:10px;
 }
 
 .review p{
-    color:#64748b;
+
+    color:#5e6c80;
+
     font-size:14px;
+
+    line-height:1.6;
 }
 
-.review strong{
-    display:block;
+.reviewer{
+
     margin-top:14px;
+
+    color:#18283f;
+
+    font-size:13px;
+
+    font-weight:800;
 }
 
-/* FINAL CTA */
 
-.final{
-    background:#102d63;
-    color:white;
-    border-radius:24px;
-    padding:42px 20px;
+/* ================= FINAL CTA ================= */
+
+.final-cta{
+
+    width:min(900px,92%);
+
+    margin:0 auto 55px;
+
+    padding:45px 25px;
+
     text-align:center;
-    margin-bottom:55px;
+
+    border-radius:25px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #0e2e68,
+        #1c62c4
+    );
+
+    color:white;
+
+    box-shadow:
+    0 20px 55px rgba(14,46,104,.20);
 }
 
-.final h2{
+.final-cta h2{
+
     font-size:34px;
+
+    margin-bottom:9px;
+}
+
+.final-cta p{
+
+    color:#dbe8ff;
+
     margin-bottom:10px;
 }
 
-.final p{
-    color:#dce8ff;
-    margin-bottom:5px;
-}
 
-/* DISCLAIMER */
+/* ================= DISCLAIMER ================= */
 
 .disclaimer{
+
+    width:min(850px,90%);
+
+    margin:0 auto 35px;
+
     text-align:center;
-    color:#8792a3;
+
+    color:#7c8797;
+
     font-size:11px;
-    max-width:800px;
-    margin:0 auto 30px;
+
+    line-height:1.6;
 }
 
-/* FOOTER */
+
+/* ================= FOOTER ================= */
 
 footer{
-    background:white;
-    border-top:1px solid #e5e7eb;
+
     text-align:center;
-    padding:25px;
-    color:#8994a5;
+
+    padding:28px 20px 100px;
+
+    background:white;
+
+    border-top:1px solid #e5e7eb;
+
+    color:#7c8797;
+
     font-size:12px;
 }
 
-/* FLOATING WHATSAPP */
+
+/* ================= FLOATING WHATSAPP ================= */
 
 .floating-whatsapp{
+
     position:fixed;
+
     right:22px;
+
     bottom:22px;
-    width:67px;
-    height:67px;
+
+    width:68px;
+
+    height:68px;
+
     border-radius:50%;
+
     background:#25D366;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     z-index:9999;
+
+    text-decoration:none;
+
+    border:3px solid #fff;
+
     box-shadow:
-    0 10px 30px rgba(37,211,102,.4),
+    0 10px 30px rgba(37,211,102,.42),
     0 0 0 7px rgba(37,211,102,.12);
+
     animation:pulse 2s infinite;
 }
 
 .floating-whatsapp svg{
-    width:37px;
-    height:37px;
+
+    width:38px;
+
+    height:38px;
+
     fill:white;
 }
 
 @keyframes pulse{
+
     0%{
         box-shadow:
-        0 10px 30px rgba(37,211,102,.4),
+        0 10px 30px rgba(37,211,102,.42),
         0 0 0 7px rgba(37,211,102,.12);
     }
+
     50%{
         box-shadow:
-        0 10px 30px rgba(37,211,102,.45),
+        0 10px 30px rgba(37,211,102,.48),
         0 0 0 14px rgba(37,211,102,.04);
     }
+
     100%{
         box-shadow:
-        0 10px 30px rgba(37,211,102,.4),
+        0 10px 30px rgba(37,211,102,.42),
         0 0 0 7px rgba(37,211,102,.12);
     }
 }
 
-/* MOBILE */
 
-@media(max-width:800px){
+/* ================= MOBILE ================= */
+
+@media(max-width:850px){
 
     .hero{
+
+        grid-template-columns:1fr;
+
+        padding-top:40px;
+    }
+
+    .chart-grid{
+
         grid-template-columns:1fr;
     }
 
-    .features{
-        grid-template-columns:repeat(2,1fr);
-    }
+    .photos-grid{
 
-    .reviews{
         grid-template-columns:1fr;
     }
 
+    .reviews-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .photo-card img{
+
+        height:auto;
+
+        max-height:none;
+
+        object-fit:contain;
+    }
 }
 
-@media(max-width:500px){
+
+@media(max-width:550px){
 
     header{
+
         padding:17px 5%;
     }
 
     .logo{
+
         font-size:17px;
     }
 
-    .badge{
+    .header-badge{
+
         font-size:10px;
+
         padding:6px 9px;
     }
 
-    .top-offer{
+    .top-section{
+
         padding:28px 16px;
     }
 
-    .top-offer h1{
+    .top-section h1{
+
         font-size:29px;
     }
 
-    .english{
+    .english-text{
+
         font-size:16px;
     }
 
-    .hindi{
+    .hindi-text{
+
         font-size:15px;
     }
 
     .hero h2{
+
         font-size:43px;
+
+        letter-spacing:-2px;
     }
 
-    .features{
+    .hero-description{
+
+        font-size:15px;
+    }
+
+    .content-card{
+
+        padding:20px 14px;
+    }
+
+    .content-points{
+
         grid-template-columns:1fr;
     }
 
+    .section-title{
+
+        font-size:29px;
+    }
+
+    .photo-card img{
+
+        height:auto;
+
+        width:100%;
+    }
+
     .floating-whatsapp{
+
         width:61px;
+
         height:61px;
+
         right:17px;
+
         bottom:18px;
     }
 
+    .floating-whatsapp svg{
+
+        width:35px;
+
+        height:35px;
+    }
 }
 
 </style>
+
 </head>
 
+
 <body>
+
+
+<!-- ================= HEADER ================= -->
 
 <header>
 
@@ -453,61 +993,68 @@ footer{
         Trade With <span>Deepak Wadhwa</span>
     </div>
 
-    <div class="badge">
-        ● MARKET INSIGHTS
+    <div class="header-badge">
+        ● TRADING
     </div>
 
 </header>
 
 
-<main class="container">
-
 
 <!-- ================= TOP FIRST IMPRESSION ================= -->
 
-<section class="top-offer">
+<section class="top-section">
 
-    <div class="top-label">
+    <div class="top-tag">
         📈 TRADING OPPORTUNITY
     </div>
 
     <h1>
-        Invest ₹1,000 in Share Market<br>
-        <span>and Earn Up To ₹15,000</span>
+        Share Market Mein
+        <span>Trading</span> Seekhein
     </h1>
 
-    <div class="english">
-        Invest ₹1,000 in the Share Market and earn up to ₹15,000.
+    <div class="english-text">
+
+        Learn about Share Market trading,
+        market analysis and trading opportunities.
         Message us on WhatsApp to know more.
+
     </div>
 
-    <div class="hindi">
-        शेयर मार्केट में ₹1,000 निवेश करके ₹15,000 तक कमाने
-        के बारे में जानने के लिए WhatsApp पर मैसेज करें।
-    </div>
+    <div class="hindi-text">
 
+        शेयर मार्केट में ट्रेडिंग, मार्केट एनालिसिस
+        और ट्रेडिंग के अवसरों के बारे में जानने के लिए
+        WhatsApp पर मैसेज करें।
+
+    </div>
 
     <a
-      class="whatsapp-main"
-      href="https://wa.me/918850960591?text=What%20is%20the%20minimum%20investment%20sir%3F"
-      target="_blank"
-      onclick="trackWhatsApp()"
+        class="whatsapp-button"
+        href="https://wa.me/918850960591?text=What%20is%20the%20minimum%20investment%20sir%3F"
+        target="_blank"
+        onclick="trackWhatsApp()"
     >
 
-        <svg class="whatsapp-icon" viewBox="0 0 32 32">
+        <svg class="wa-icon" viewBox="0 0 32 32">
+
             <path d="M19.11 17.21c-.27-.14-1.58-.78-1.83-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.34-.79-.7-1.32-1.56-1.47-1.83-.15-.27-.02-.42.11-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29 0 1.35.98 2.65 1.12 2.83.14.18 1.93 2.95 4.68 4.13.65.28 1.16.45 1.56.58.66.21 1.26.18 1.73.11.53-.08 1.58-.65 1.8-1.28.22-.63.22-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
+
             <path d="M16.02 3C8.83 3 3 8.83 3 16.02c0 2.3.6 4.47 1.65 6.35L3 29l6.82-1.6a12.96 12.96 0 0 0 6.2 1.57h.01c7.19 0 13.02-5.83 13.02-13.02S23.21 3 16.02 3zm0 23.65h-.01c-2.04 0-4.04-.55-5.79-1.59l-.42-.25-4.05.95.96-3.95-.27-.41a10.8 10.8 0 1 1 9.58 5.25z"/>
+
         </svg>
 
         WhatsApp Par Message Karein
 
     </a>
 
-    <div class="offer-note">
+    <div class="top-note">
         Trading involves market risk. Returns are not guaranteed.
     </div>
 
 </section>
+
 
 
 <!-- ================= HERO ================= -->
@@ -521,9 +1068,12 @@ footer{
             <span>DEEPAK WADHWA</span>
         </h2>
 
-        <p>
-            Learn about market movements, trading concepts,
-            strategy and risk management with simple and practical guidance.
+        <p class="hero-description">
+
+            Share market ko simple aur practical tareeke se
+            samjhein — market trends, trading concepts,
+            analysis aur risk management ke saath.
+
         </p>
 
     </div>
@@ -533,42 +1083,47 @@ footer{
 
     <div class="chart-card">
 
-        <div class="chart-head">
+        <div class="chart-header">
 
-            <span>
-                Market Overview
-            </span>
+            <div class="chart-name">
+                Market Analysis
+            </div>
 
-            <span class="live">
+            <div class="live">
                 ● MARKET VIEW
-            </span>
+            </div>
 
         </div>
 
 
         <div class="chart">
 
-            <svg viewBox="0 0 600 280"
-                 preserveAspectRatio="none">
+            <svg
+                viewBox="0 0 600 280"
+                preserveAspectRatio="none"
+            >
 
                 <defs>
 
                     <linearGradient
-                        id="gradient"
+                        id="chartArea"
                         x1="0"
                         y1="0"
                         x2="0"
-                        y2="1">
+                        y2="1"
+                    >
 
                         <stop
                             offset="0%"
-                            stop-color="#16a36a"
-                            stop-opacity=".22"/>
+                            stop-color="#16c784"
+                            stop-opacity=".28"
+                        />
 
                         <stop
                             offset="100%"
-                            stop-color="#16a36a"
-                            stop-opacity="0"/>
+                            stop-color="#16c784"
+                            stop-opacity="0"
+                        />
 
                     </linearGradient>
 
@@ -576,7 +1131,8 @@ footer{
 
 
                 <path
-                    d="M0 235
+                    d="
+                    M0 235
                     L35 220
                     L70 230
                     L105 190
@@ -595,13 +1151,15 @@ footer{
                     L560 58
                     L600 25
                     L600 280
-                    L0 280 Z"
-                    fill="url(#gradient)"
+                    L0 280 Z
+                    "
+                    fill="url(#chartArea)"
                 />
 
 
                 <path
-                    d="M0 235
+                    d="
+                    M0 235
                     L35 220
                     L70 230
                     L105 190
@@ -618,9 +1176,10 @@ footer{
                     L490 78
                     L525 45
                     L560 58
-                    L600 25"
+                    L600 25
+                    "
                     fill="none"
-                    stroke="#16a36a"
+                    stroke="#16c784"
                     stroke-width="5"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -635,39 +1194,90 @@ footer{
 </section>
 
 
-<!-- ================= FEATURES ================= -->
 
-<section>
+<!-- ================= TRADING CONTENT ================= -->
 
-    <div class="section-title">
-        Why Choose Our Guidance?
-    </div>
+<section class="trading-content">
 
+    <div class="content-card">
 
-    <div class="features">
-
-        <div class="feature">
-            <div class="feature-icon">📊</div>
-            <h3>Market Analysis</h3>
-            <p>Understand market movements and trends.</p>
+        <div class="content-title">
+            Trading Opportunity
         </div>
 
-        <div class="feature">
-            <div class="feature-icon">🛡️</div>
-            <h3>Risk Management</h3>
-            <p>Learn responsible risk management concepts.</p>
+        <div class="content-subtitle">
+            Get started with the basic requirements
         </div>
 
-        <div class="feature">
-            <div class="feature-icon">🎯</div>
-            <h3>Trading Discipline</h3>
-            <p>Develop a structured trading approach.</p>
-        </div>
 
-        <div class="feature">
-            <div class="feature-icon">📚</div>
-            <h3>Practical Learning</h3>
-            <p>Understand trading in a simple way.</p>
+        <div class="content-points">
+
+
+            <div class="content-point">
+
+                <div class="point-icon">
+                    🔤
+                </div>
+
+                <div>
+                    Basic English
+                </div>
+
+            </div>
+
+
+            <div class="content-point">
+
+                <div class="point-icon">
+                    🔞
+                </div>
+
+                <div>
+                    Ages 18+
+                </div>
+
+            </div>
+
+
+            <div class="content-point">
+
+                <div class="point-icon">
+                    💰
+                </div>
+
+                <div>
+                    ₹1,000 daily allowance
+                </div>
+
+            </div>
+
+
+            <div class="content-point">
+
+                <div class="point-icon">
+                    ⭐
+                </div>
+
+                <div>
+                    * No experience needed
+                </div>
+
+            </div>
+
+
+            <div class="content-point">
+
+                <div class="point-icon">
+                    🎁
+                </div>
+
+                <div>
+                    Permanent benefits
+                </div>
+
+            </div>
+
+
         </div>
 
     </div>
@@ -675,73 +1285,300 @@ footer{
 </section>
 
 
+
+<!-- ================= MARKET CHARTS ================= -->
+
+<section class="market-section">
+
+    <div class="section-title">
+        📊 Market Watch
+    </div>
+
+    <div class="section-subtitle">
+        Trading-style market visualization
+    </div>
+
+
+    <div class="chart-grid">
+
+
+        <div class="chart-card">
+
+            <div class="chart-header">
+
+                <div class="chart-name">
+                    NIFTY 50
+                </div>
+
+                <div class="live">
+                    ● MARKET VIEW
+                </div>
+
+            </div>
+
+
+            <div class="chart">
+
+                <svg
+                    viewBox="0 0 600 280"
+                    preserveAspectRatio="none"
+                >
+
+                    <polyline
+                        points="
+                        0,235
+                        40,220
+                        80,230
+                        120,190
+                        160,205
+                        200,160
+                        240,175
+                        280,130
+                        320,150
+                        360,100
+                        400,120
+                        440,75
+                        480,95
+                        520,55
+                        560,70
+                        600,30"
+                        fill="none"
+                        stroke="#16c784"
+                        stroke-width="5"
+                    />
+
+                </svg>
+
+            </div>
+
+        </div>
+
+
+        <div class="chart-card">
+
+            <div class="chart-header">
+
+                <div class="chart-name">
+                    BANK NIFTY
+                </div>
+
+                <div class="live">
+                    ● MARKET VIEW
+                </div>
+
+            </div>
+
+
+            <div class="chart">
+
+                <svg
+                    viewBox="0 0 600 280"
+                    preserveAspectRatio="none"
+                >
+
+                    <polyline
+                        points="
+                        0,220
+                        40,210
+                        80,225
+                        120,180
+                        160,195
+                        200,150
+                        240,165
+                        280,125
+                        320,140
+                        360,95
+                        400,115
+                        440,70
+                        480,85
+                        520,50
+                        560,65
+                        600,25"
+                        fill="none"
+                        stroke="#4d91ff"
+                        stroke-width="5"
+                    />
+
+                </svg>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= PHOTOS ================= -->
+
+<section class="photos-section">
+
+    <div class="section-title">
+        📈 Trading Highlights
+    </div>
+
+    <div class="section-subtitle">
+        Trading related information and examples
+    </div>
+
+
+    <div class="photos-grid">
+
+
+        <div class="photo-card">
+
+            <img
+                src="photo1.jpg"
+                alt="Trading information"
+            >
+
+            <div class="photo-caption">
+                Trading Information
+            </div>
+
+        </div>
+
+
+        <div class="photo-card">
+
+            <img
+                src="photo2.jpg"
+                alt="Trading market information"
+            >
+
+            <div class="photo-caption">
+                Market & Trading
+            </div>
+
+        </div>
+
+
+        <div class="photo-card">
+
+            <img
+                src="photo3.jpg"
+                alt="Trading example"
+            >
+
+            <div class="photo-caption">
+                Trading Example
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
 <!-- ================= REVIEWS ================= -->
 
-<section style="margin-top:55px;">
+<section class="reviews-section">
 
     <div class="section-title">
         ⭐ What Learners Say
     </div>
 
+    <div class="section-subtitle">
+        Experiences from people learning about trading
+    </div>
 
-    <div class="reviews">
+
+    <div class="reviews-grid">
+
 
         <div class="review">
-            <div class="stars">★★★★★</div>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
             <p>
-                Easy-to-understand explanations helped me
-                understand basic market concepts.
+                The market concepts are explained in a simple
+                and easy-to-understand way.
             </p>
-            <strong>— Trading Learner</strong>
+
+            <div class="reviewer">
+                — Trading Learner
+            </div>
+
         </div>
 
 
         <div class="review">
-            <div class="stars">★★★★★</div>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
             <p>
-                I liked the focus on discipline and risk management.
+                I found the focus on market understanding
+                and risk management useful.
             </p>
-            <strong>— Market Learner</strong>
+
+            <div class="reviewer">
+                — Market Learner
+            </div>
+
         </div>
 
 
         <div class="review">
-            <div class="stars">★★★★★</div>
+
+            <div class="stars">
+                ★★★★★
+            </div>
+
             <p>
-                The guidance made trading concepts easier to understand.
+                Practical information helped me understand
+                trading concepts better.
             </p>
-            <strong>— Trading Learner</strong>
+
+            <div class="reviewer">
+                — Community Member
+            </div>
+
         </div>
+
 
     </div>
 
 </section>
 
 
+
 <!-- ================= FINAL CTA ================= -->
 
-<section class="final">
+<section class="final-cta">
 
     <h2>
         Want To Know More?
     </h2>
 
     <p>
-        Minimum investment aur trading opportunities ke baare mein
+        Minimum investment aur trading details ke liye
         WhatsApp par message karein.
     </p>
 
 
     <a
-      class="whatsapp-main"
-      href="https://wa.me/918850960591?text=What%20is%20the%20minimum%20investment%20sir%3F"
-      target="_blank"
-      onclick="trackWhatsApp()"
+        class="whatsapp-button"
+        href="https://wa.me/918850960591?text=What%20is%20the%20minimum%20investment%20sir%3F"
+        target="_blank"
+        onclick="trackWhatsApp()"
     >
 
-        <svg class="whatsapp-icon" viewBox="0 0 32 32">
-            <path d="M19.11 17.21c-.27-.14-1.58-.78-1.83-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.34-.79-.7-1.32-1.56-1.47-1.83-.15-.27-.02-.42.11-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29 0 1.35.98 2.65 1.12 2.83.14.18 1.93 2.95 4.68 4.13.65.28 1.16.45 1.56.58.66.21 1.58-.65 1.8-1.28.22-.63.22-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
+        <svg class="wa-icon" viewBox="0 0 32 32">
+
+            <path d="M19.11 17.21c-.27-.14-1.58-.78-1.83-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.34-.79-.7-1.32-1.56-1.47-1.83-.15-.27-.02-.42.11-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29 0 1.35.98 2.65 1.12 2.83.14.18 1.93 2.95 4.68 4.13.65.28 1.16.45 1.56.58.66.21 1.26.18 1.73.11.53-.08 1.58-.65 1.8-1.28.22-.63.22-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
+
             <path d="M16.02 3C8.83 3 3 8.83 3 16.02c0 2.3.6 4.47 1.65 6.35L3 29l6.82-1.6a12.96 12.96 0 0 0 6.2 1.57h.01c7.19 0 13.02-5.83 13.02-13.02S23.21 3 16.02 3zm0 23.65h-.01c-2.04 0-4.04-.55-5.79-1.59l-.42-.25-4.05.95.96-3.95-.27-.41a10.8 10.8 0 1 1 9.58 5.25z"/>
+
         </svg>
 
         WhatsApp Par Message Karein
@@ -751,35 +1588,35 @@ footer{
 </section>
 
 
-<!-- DISCLAIMER -->
+
+<!-- ================= DISCLAIMER ================= -->
 
 <div class="disclaimer">
-    ⚠️ Trading and investments involve market risk. The displayed
-    ₹15,000 figure is not a guaranteed return. Actual results may vary.
-    Please make decisions according to your own risk tolerance.
+
+    ⚠️ Trading and investments involve risk. Returns are not guaranteed.
+    Please verify all terms, benefits and financial information before
+    making any decision.
+
 </div>
 
-</main>
 
+</body>
 
-<footer>
-    © 2026 Trade With Deepak Wadhwa
-</footer>
 
 
 <!-- ================= FLOATING WHATSAPP ================= -->
 
 <a
-  class="floating-whatsapp"
-  href="https://wa.me/918850960591?text=What%20is%20the%20minimum%20investment%20sir%3F"
-  target="_blank"
-  onclick="trackWhatsApp()"
-  aria-label="WhatsApp"
+    class="floating-whatsapp"
+    href="https://wa.me/918850960591?text=What%20is%20the%20minimum%20investment%20sir%3F"
+    target="_blank"
+    aria-label="WhatsApp"
+    onclick="trackWhatsApp()"
 >
 
     <svg viewBox="0 0 32 32">
 
-        <path d="M19.11 17.21c-.27-.14-1.58-.78-1.83-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.34-.79-.7-1.32-1.56-1.47-1.83-.15-.27-.02-.42.11-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29 0 1.35.98 2.65 1.12 2.83.14.18 1.93 2.95 4.68 4.13.65.28 1.16.45 1.56.58.66.21 1.58.18 1.73.11.53-.08 1.58-.65 1.8-1.28.22-.63.22-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
+        <path d="M19.11 17.21c-.27-.14-1.58-.78-1.83-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.34-.79-.7-1.32-1.56-1.47-1.83-.15-.27-.02-.42.11-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47-.16-.01-.34-.01-.52-.01-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29 0 1.35.98 2.65 1.12 2.83.14.18 1.93 2.95 4.68 4.13.65.28 1.16.45 1.56.58.66.21 1.26.18 1.73.11.53-.08 1.58-.65 1.8-1.28.22-.63.22-1.17.16-1.28-.07-.11-.25-.18-.52-.32z"/>
 
         <path d="M16.02 3C8.83 3 3 8.83 3 16.02c0 2.3.6 4.47 1.65 6.35L3 29l6.82-1.6a12.96 12.96 0 0 0 6.2 1.57h.01c7.19 0 13.02-5.83 13.02-13.02S23.21 3 16.02 3zm0 23.65h-.01c-2.04 0-4.04-.55-5.79-1.59l-.42-.25-4.05.95.96-3.95-.27-.41a10.8 10.8 0 1 1 9.58 5.25z"/>
 
@@ -793,12 +1630,19 @@ footer{
 function trackWhatsApp(){
 
     if(typeof fbq === "function"){
-        fbq('track','Contact');
+
+        fbq(
+            'track',
+            'Contact',
+            {
+                content_name:'WhatsApp Trading Enquiry'
+            }
+        );
+
     }
 
 }
 
 </script>
 
-</body>
 </html>
